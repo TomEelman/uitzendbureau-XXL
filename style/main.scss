@@ -1,0 +1,27 @@
+:root {
+    --bg-color: #fcfcfc;
+    --dep-color: #c4c4c4;
+    --acc-color: #3f733f;
+}
+
+html {
+    margin: 0;
+}
+body {
+    margin: 0;
+}
+
+//styling for footer
+
+.fbox {
+    width: 33.3%;
+    height: 100%;
+    padding: 5px;
+    background-color: var(--dep-color);
+}
+.footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: var(--bg-color);
+}
