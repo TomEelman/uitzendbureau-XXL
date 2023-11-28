@@ -1,5 +1,5 @@
 <nav>
-<img src="images/logo.png" alt="Logo">
+<img src="../img/logo.png" alt="Logo">
     <ul>
     <div class="dropdown">
   <button class="btn">Taal</button>
