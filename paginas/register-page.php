@@ -37,3 +37,5 @@
 
     <input type="submit" placeholder="Regsitreren"/>
 </form>
+
+<a href="login-page.php">Heb je al een account? Klik hier</a>

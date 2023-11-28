@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style/headerfooter.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
+  <header>
+    <?php include("includes/navbar.php") ?>
+  </header>
   <body>
     <main>
         <h1>Welcome to My Website</h1>  
