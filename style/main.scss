@@ -1,6 +1,6 @@
 :root {
     --bg-color: #fcfcfc;
-    --dep-color: #c4c4c4;
+    --dep-color: #d4d4d4;
     --acc-color: #3f733f;
 }
 
@@ -9,4 +9,10 @@ html {
 }
 body {
     margin: 0;
+}
+ul {
+    margin: 0;
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
