@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($conn, $query)) {
         echo '<script>alert("Je bent geregistreerd")</script>';
-        header('Location: ../index.php');
+        header('Location: ../paginas/login-page.php');
         exit();
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conn);
