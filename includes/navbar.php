@@ -1,20 +1,23 @@
-<nav>
-<img src="../img/logo.png" alt="Logo">
-    <ul>
-    <div class="dropdown">
-  <button class="btn">Taal</button>
-  <div class="dropdown-content">
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  </div>
-</div>
+<head>
+  <link rel="stylesheet" href="../style/main.scss">
+  <link rel="stylesheet" href="../style/headerfooter.css">
+</head>
 
-        <button class="btn navbut"><a class="btn" href="../index.php">Home</a></button>
-        <button class="btn navbut"><a class="btn" href="#news">File</a></button>
-        <button class="btn navbut"><a class="btn" href="#contact">View</a></button>
-        <button class="btn navbut"><a class="btn" href="#about">Help</a></button>
-        <button class="btn navbut"><a class="btn" href="../paginas/login-page.php">Inlog/Uitlog</a></button>
-        <button class="btn navbut"><a class="btn" href="#about">Account</a></button>        
+<header>
+  <nav class="navbar">
+    <img class="logo" src="../img/logo.png" alt="Logo">
+    <ul class="nav-links-container">
+      <li><a class="nav-links" href="../index.php">Home</a></li>
+      <li><a class="nav-links" href="../paginas/prikbord-page.php">Vacaturelijst</a></li>
+      
+      <?php if (isset($_SESSION["firstname"])) { ?>
+        <li><a class="nav-links" href="../index.php">Account</a></li>
+        <li><a class="nav-links" href="../components/logout-page.php">Logout</a></li>
+      <?php } else { ?>
+        <li><a class="nav-links" href="../paginas/login-page.php">Inloggen</a></li>
+      <?php } ?> 
+
+      <li><a class="nav-links" href="../paginas/rules-page.php">Huisregels</a></li>
     </ul>
-</nav>
+  </nav>
+</header>

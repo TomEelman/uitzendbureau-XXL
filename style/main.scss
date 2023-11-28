@@ -1,7 +1,10 @@
 :root {
     --bg-color: #fcfcfc;
     --dep-color: #d4d4d4;
-    --acc-color: #3f733f;
+    --acc-color: #2c3ab7;
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -12,7 +15,4 @@ body {
 }
 ul {
     margin: 0;
-}
-* {
-    font-family: Arial, Helvetica, sans-serif;
 }

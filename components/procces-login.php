@@ -15,11 +15,18 @@ $result = mysqli_stmt_get_result($stmt);
 if ($result && mysqli_num_rows($result) > 0) {
     $user = mysqli_fetch_assoc($result);
     $hashed_password_from_db = $user['password'];
+    if (isset($_SESSION['email'])) {
+        // User is logged in
+        echo 'Logged in as: ' . $_SESSION['email'];
+    } else {
+        // User is not logged in
+        echo 'Not logged in';
+    }
 
     if (password_verify($password, $hashed_password_from_db)) {
         $_SESSION['email'] = $email;
         header("Location: ../index.php");
-        exit();
+        exit();        
     } else {
         $_SESSION['login_error'] = "Incorrect password";
         header("Location: ../paginas/login-page.php");

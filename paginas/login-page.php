@@ -14,18 +14,20 @@ session_start();
     <?php include("../includes/navbar.php") ?>
 </header>
 <body>
-    <p>Inloggen</p>
-    <form action="../components/procces-login.php" method="POST">
+    <p class="login-txt">Inloggen</p>
+    <form action="../components/procces-login.php" method="POST" class="form">
 
-        <input type="text" name="email" placeholder="Email" />
+    <label for="email">Email:</label>
+        <input class="input" type="text" name="email" placeholder="Email" />
         <br>
 
-        <input type="password" name="password" placeholder="Wachtwoord" />
+    <label for="password">Wachtwoord:</label>
+        <input class="input" type="password" name="password" placeholder="Wachtwoord" />
         <br>
 
-        <input type="submit" placeholder="Regsitreren" />
+        <input class="input submit-button" type="submit" value="Inloggen"/>
     </form>
- <a href="register-page.php">Heb je nog geen account? Maak er hier een</a>
+ <a class="register-page-txt" href="register-page.php">Heb je nog geen account? Maak er hier een</a>
 </body>
 <script>
     setTimeout(function() {

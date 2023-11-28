@@ -1,4 +1,6 @@
 /* login-page.php */
+/* Error Message */
+
 #errorMessage {
     font-size: 16px;
     padding: 20px;
@@ -10,4 +12,116 @@
     position: absolute;
     top: 42;
     margin-left: 45%;
+}
+
+/* Login form */
+
+.form {
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    margin-left: 39%;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.register-page-txt {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.login-txt {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 32px;
+}
+
+/* Register form */
+
+.register-form {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 20px; 
+    margin-left: 26.5%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container-two{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-top: -23.9%;
+}
+.input-container-three{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-top: -23.9%;
+}
+
+.register-input {
+    width: 30.86%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.register-input-two {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.submit-button-register {
+    margin-left: 32.9%;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
 }

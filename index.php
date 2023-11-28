@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XXL-uitzendbureau</title>
-    <link rel="stylesheet" href="style/main.scss">
-    <link rel="stylesheet" href="style/headerfooter.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <header>

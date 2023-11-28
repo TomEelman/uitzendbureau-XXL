@@ -1,41 +1,89 @@
-<p>Registreren</p>
-<form action="../components/registration-login.php" method="POST">
-    <input type="text" name="firstname" placeholder="Voornaam" />
-    <br>
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
 
-    <input type="text" name="lastname" placeholder="Achternaam" />
-    <br>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style/pages.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
 
-    <input type="text" name="email" placeholder="Email" />
-    <br>
+<body>
+    <header>
+        <?php include("../includes/navbar.php") ?>
+    </header>
 
-    <input type="password" name="password" placeholder="Wachtwoord" />
-    <br>
+    <p class="login-txt">Registreren</p>
+    <form action="../components/registration-login.php" method="POST" class="register-form">
 
-    <input type="number" name="phonenumber" placeholder="Telefoon nummer" />
-    <br>
+        <div class="input-container">
+            <label for="firstname">Voornaam:</label>
+            <input class="register-input voornaam" type="text" name="firstname" placeholder="Voornaam" />
 
-    <select id="country" name="country">
-        <option value="nl">Nederland</option>
-        <option value="en">Engeland</option>
-    </select><br>
+            <label for="lastname">Achternaam:</label>
+            <input class="register-input achternaam" type="text" name="lastname" placeholder="Achternaam" />
 
-    <input type="text" name="city" placeholder="Stad" />
-    <br>
+            <label for="email">Email:</label>
+            <input class="register-input" type="text" name="email" placeholder="Email" />
 
-    <input type="text" name="postalcode" placeholder="Postcode" />
-    <br>
+            <label for="wachtwoord">Wachtwoord:</label>
+            <input class="register-input" type="password" name="password" placeholder="Wachtwoord" />
 
-    <input type="text" name="street" placeholder="Straat" />
-    <br>
+            <label for="phonenumber">Phonenumber:</label>
+            <input class="register-input" type="number" name="phonenumber" placeholder="Telefoon nummer" />
+        </div>
 
-    <input type="text" name="housenumber" placeholder="Huisnummer" />
-    <br>
+        <div class="input-container-two">
+            <label for="country">Country:</label>
+            <select class="register-input-two" id="country" name="country">
+                <option value="nl">Nederland</option>
+                <option value="en">Engeland</option>
+            </select>
 
-    <input type="text" name="additive" placeholder="Toev" />
-    <br>
+            <label for="city">City:</label>
+            <input class="register-input-two" type="text" name="city" placeholder="Stad" />
 
-    <input type="submit" placeholder="Regsitreren"/>
-</form>
+            <label for="phonenumber">Phonenumber:</label>
+            <input class="register-input-two" type="number" name="phonenumber" placeholder="Telefoon nummer" />
 
-<a href="login-page.php">Heb je al een account? Klik hier</a>
+            <label for="postalcode">Postcode:</label>
+            <input class="register-input-two" type="text" name="postalcode" placeholder="Postcode" />
+
+            <label for="street">Straat:</label>
+            <input class="register-input-two" type="text" name="street" placeholder="Straat" />
+        </div>
+
+        <div class="input-container-three">
+
+            <label for="housenumber">Huisnummer:</label>
+            <input class="register-input-two" type="text" name="housenumber" placeholder="Huisnummer" />
+
+            <label for="additive">Toevoeging:</label>
+            <input class="register-input-two" type="text" name="additive" placeholder="Toev" />
+        </div>
+
+        <input class="register-input submit-button-register" type="submit" value="Registreren" />
+    </form>
+
+    <a class="register-page-txt" href="login-page.php">Heb je al een account? Klik hier</a>
+</body>
+
+</html>
+
+<script>
+    setTimeout(function() {
+        var errorMessage = document.getElementById('errorMessage');
+        if (errorMessage) {
+            errorMessage.style.display = 'none';
+        }
+    }, 3000);
+</script>
+<?php
+if (isset($_SESSION['login_error'])) {
+    echo '<p id="errorMessage">' . $_SESSION['login_error'] . '</p>';
+    unset($_SESSION['login_error']);
+}
+?>
