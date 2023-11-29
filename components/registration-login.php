@@ -4,6 +4,7 @@ $conn = mysqli_connect("localhost", "root", "", "uitzendbureau-xxl");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstname = mysqli_real_escape_string($conn, $_POST["firstname"]);
     $lastname = mysqli_real_escape_string($conn, $_POST["lastname"]);
+    $companyname = mysqli_real_escape_string($conn, $_POST["companyname"]);
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
     $password = mysqli_real_escape_string($conn, $_POST["password"]);
     $phonenumber = mysqli_real_escape_string($conn, $_POST["phonenumber"]);
@@ -15,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $additive = mysqli_real_escape_string($conn, $_POST["additive"]);
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO users (firstname, lastname, email, password, phonenumber, country, city, postalcode, street, housenumber, additive) VALUES ('$firstname', '$lastname', '$email', '$hashed_password', '$phonenumber', '$country', '$city', '$postalcode', '$street', '$housenumber', '$additive')";
+    $query = "INSERT INTO users (firstname, lastname, companyname, email, password, phonenumber, country, city, postalcode, street, housenumber, additive) VALUES ('$firstname', '$lastname', '$companyname', '$email', '$hashed_password', '$phonenumber', '$country', '$city', '$postalcode', '$street', '$housenumber', '$additive')";
 
     if (mysqli_query($conn, $query)) {
         echo '<script>alert("Je bent geregistreerd")</script>';

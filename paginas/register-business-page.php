@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,24 +14,24 @@ session_start();
         <?php include("../includes/navbar.php") ?>
     </header>
 
-    <p class="login-txt">Registreren</p>
+    <p class="login-txt">Registreren particulier account</p>
     <form action="../components/registration-login.php" method="POST" class="register-form">
 
         <div class="input-container">
-            <label for="firstname">Voornaam:</label>
-            <input class="register-input voornaam" type="text" name="firstname" placeholder="Voornaam" required/>
+            <label for="firstname">Contact voornaam:</label>
+            <input class="register-input voornaam" type="text" name="firstname" placeholder="Voornaam" required />
 
             <label for="lastname">Achternaam:</label>
-            <input class="register-input achternaam" type="text" name="lastname" placeholder="Achternaam" required/>
+            <input class="register-input achternaam" type="text" name="lastname" placeholder="Achternaam" required />
+
+            <label for="companyname">Bedrijf naam:</label>
+            <input class="register-input achternaam" type="text" name="companyname" placeholder="Bedrijf naam" required />
 
             <label for="email">Email:</label>
-            <input class="register-input" type="email" name="email" placeholder="Email" required/>
+            <input class="register-input" type="email" name="email" placeholder="Email" required />
 
             <label for="wachtwoord">Wachtwoord:</label>
-            <input class="register-input" type="password" name="password" placeholder="Wachtwoord" required/>
-
-            <label for="phonenumber">Phonenumber:</label>
-            <input class="register-input" type="number" name="phonenumber" placeholder="Telefoon nummer" required/>
+            <input class="register-input" type="password" name="password" placeholder="Wachtwoord" required />
         </div>
 
         <div class="input-container-two">
@@ -45,22 +42,23 @@ session_start();
             </select>
 
             <label for="city">City:</label>
-            <input class="register-input-two" type="text" name="city" placeholder="Stad" required/>
+            <input class="register-input-two" type="text" name="city" placeholder="Stad" required />
 
             <label for="phonenumber">Phonenumber:</label>
-            <input class="register-input-two" type="number" name="phonenumber" placeholder="Telefoon nummer" required/>
+            <input class="register-input-two" type="number" name="phonenumber" placeholder="Telefoon nummer" required />
 
             <label for="postalcode">Postcode:</label>
-            <input class="register-input-two" type="text" name="postalcode" placeholder="Postcode" required/>
+            <input class="register-input-two" type="text" name="postalcode" placeholder="Postcode" required />
 
             <label for="street">Straat:</label>
-            <input class="register-input-two" type="text" name="street" placeholder="Straat" required/>
+            <input class="register-input-two" type="text" name="street" placeholder="Straat" required />
+
         </div>
 
         <div class="input-container-three">
-
             <label for="housenumber">Huisnummer:</label>
             <input class="register-input-two" type="text" name="housenumber" placeholder="Huisnummer" />
+
 
             <label for="additive">Toevoeging:</label>
             <input class="register-input-two" type="text" name="additive" placeholder="Toev" />

@@ -25,7 +25,8 @@
 
         <input class="input submit-button" type="submit" value="Inloggen"/>
     </form>
- <a class="register-page-txt" href="register-page.php">Heb je nog geen account? Maak er hier een</a>
+ <a class="register-page-txt" href="register-personal-page.php">Maak een persoonlijk account</a>
+ <a class="register-page-txt" href="register-business-page.php">Maak een zakelijk account</a>
 </body>
 <script>
     setTimeout(function() {
