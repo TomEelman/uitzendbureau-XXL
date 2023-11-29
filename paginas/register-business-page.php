@@ -37,8 +37,8 @@
         <div class="input-container-two">
             <label for="country">Country:</label>
             <select class="register-input-two" id="country" name="country">
-                <option value="nl">Nederland</option>
-                <option value="en">Engeland</option>
+                <option value="Nederland">Nederland</option>
+                <option value="Engeland">Engeland</option>
             </select>
 
             <label for="city">City:</label>

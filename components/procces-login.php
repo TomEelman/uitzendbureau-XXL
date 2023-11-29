@@ -10,7 +10,7 @@ if (!$conn) {
 $email = mysqli_real_escape_string($conn, $_POST["email"]);
 $password = $_POST["password"];
 
-$query = "SELECT email, password FROM users WHERE email = ?";
+$query = "SELECT * FROM users WHERE email = ?";
 $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_bind_param($stmt, 's', $email);
 mysqli_stmt_execute($stmt);
@@ -22,6 +22,18 @@ if ($result && mysqli_num_rows($result) > 0) {
 
     if (password_verify($password, $hashed_password_from_db)) {
         $_SESSION['email'] = $email;
+        $_SESSION['companyname'] = $user['companyname'];
+        $_SESSION['firstname'] = $user['firstname'];
+        $_SESSION['lastname'] = $user['lastname'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['phonenumber'] = $user['phonenumber'];
+        $_SESSION['country'] = $user['country'];
+        $_SESSION['city'] = $user['city'];
+        $_SESSION['postalcode'] = $user['postalcode'];
+        $_SESSION['street'] = $user['street'];
+        $_SESSION['housenumber'] = $user['housenumber'];
+        $_SESSION['additive'] = $user['additive'];
+
         header("Location: ../index.php");
         exit();        
     } else {
