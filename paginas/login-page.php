@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +8,7 @@ session_start();
     <title>Login</title>
 </head>
 <header>
+    <?php include("../components/session-start.php") ?>
     <?php include("../includes/navbar.php") ?>
 </header>
 <body>
@@ -18,16 +16,17 @@ session_start();
     <form action="../components/procces-login.php" method="POST" class="form">
 
     <label for="email">Email:</label>
-        <input class="input" type="text" name="email" placeholder="Email" />
+        <input class="input" type="email" name="email" placeholder="Email" required/>
         <br>
 
     <label for="password">Wachtwoord:</label>
-        <input class="input" type="password" name="password" placeholder="Wachtwoord" />
+        <input class="input" type="password" name="password" placeholder="Wachtwoord" required/>
         <br>
 
         <input class="input submit-button" type="submit" value="Inloggen"/>
     </form>
- <a class="register-page-txt" href="register-page.php">Heb je nog geen account? Maak er hier een</a>
+ <a class="register-page-txt" href="register-personal-page.php">Maak een persoonlijk account</a>
+ <a class="register-page-txt" href="register-business-page.php">Maak een zakelijk account</a>
 </body>
 <script>
     setTimeout(function() {

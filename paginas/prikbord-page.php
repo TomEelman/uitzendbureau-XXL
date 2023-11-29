@@ -6,8 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/main.scss">
     <link rel="stylesheet" href="style/pages.css">
-</head>
-
+  </head>
 <body>
 <div class="container">
         <h1>Job Offers</h1>
