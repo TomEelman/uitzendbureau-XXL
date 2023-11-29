@@ -13,6 +13,7 @@ session_start();
 
 <body>
     <header>
+        <?php include("../components/session-start.php") ?>
         <?php include("../includes/navbar.php") ?>
     </header>
 
@@ -21,19 +22,19 @@ session_start();
 
         <div class="input-container">
             <label for="firstname">Voornaam:</label>
-            <input class="register-input voornaam" type="text" name="firstname" placeholder="Voornaam" />
+            <input class="register-input voornaam" type="text" name="firstname" placeholder="Voornaam" required/>
 
             <label for="lastname">Achternaam:</label>
-            <input class="register-input achternaam" type="text" name="lastname" placeholder="Achternaam" />
+            <input class="register-input achternaam" type="text" name="lastname" placeholder="Achternaam" required/>
 
             <label for="email">Email:</label>
-            <input class="register-input" type="text" name="email" placeholder="Email" />
+            <input class="register-input" type="email" name="email" placeholder="Email" required/>
 
             <label for="wachtwoord">Wachtwoord:</label>
-            <input class="register-input" type="password" name="password" placeholder="Wachtwoord" />
+            <input class="register-input" type="password" name="password" placeholder="Wachtwoord" required/>
 
             <label for="phonenumber">Phonenumber:</label>
-            <input class="register-input" type="number" name="phonenumber" placeholder="Telefoon nummer" />
+            <input class="register-input" type="number" name="phonenumber" placeholder="Telefoon nummer" required/>
         </div>
 
         <div class="input-container-two">
@@ -44,16 +45,16 @@ session_start();
             </select>
 
             <label for="city">City:</label>
-            <input class="register-input-two" type="text" name="city" placeholder="Stad" />
+            <input class="register-input-two" type="text" name="city" placeholder="Stad" required/>
 
             <label for="phonenumber">Phonenumber:</label>
-            <input class="register-input-two" type="number" name="phonenumber" placeholder="Telefoon nummer" />
+            <input class="register-input-two" type="number" name="phonenumber" placeholder="Telefoon nummer" required/>
 
             <label for="postalcode">Postcode:</label>
-            <input class="register-input-two" type="text" name="postalcode" placeholder="Postcode" />
+            <input class="register-input-two" type="text" name="postalcode" placeholder="Postcode" required/>
 
             <label for="street">Straat:</label>
-            <input class="register-input-two" type="text" name="street" placeholder="Straat" />
+            <input class="register-input-two" type="text" name="street" placeholder="Straat" required/>
         </div>
 
         <div class="input-container-three">
