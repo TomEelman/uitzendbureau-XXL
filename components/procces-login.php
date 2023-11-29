@@ -22,6 +22,7 @@ if ($result && mysqli_num_rows($result) > 0) {
 
     if (password_verify($password, $hashed_password_from_db)) {
         $_SESSION['email'] = $email;
+        $_SESSION['userid'] = $user['userid'];
         $_SESSION['companyname'] = $user['companyname'];
         $_SESSION['firstname'] = $user['firstname'];
         $_SESSION['lastname'] = $user['lastname'];
