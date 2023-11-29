@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <header>
+    <?php include("../components/session-start.php") ?>
     <?php include("../includes/navbar.php") ?>
 </header>
 <body>
