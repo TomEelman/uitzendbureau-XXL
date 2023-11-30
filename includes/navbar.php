@@ -17,6 +17,7 @@
 
       <?php if (isset($_SESSION["email"])) { ?>
         <li><a class="nav-links" href="../paginas/account-page.php">Account</a></li>
+        <li><a class="nav-links" href="../paginas/chat-hub.php">Messages</a></li>
         <li><a class="nav-links" href="../paginas/logout-page.php">Logout</a></li>
       <?php } else { ?>
         <li><a class="nav-links" href="../paginas/login-page.php">Inloggen</a></li>
