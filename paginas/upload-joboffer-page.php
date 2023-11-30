@@ -31,10 +31,7 @@
 
                 <button type="button">Post Job</button>
             </form>
-
-            <div id="jobOffersContainer">
-                <?php include '../components/display-joboffers.php'; ?>
-            </div>
+            
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>

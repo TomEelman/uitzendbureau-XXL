@@ -14,10 +14,13 @@
     </header>
     <main>
         <?php if (isset($_SESSION['companyname'])) { ?>
-            <button>Vacaturen uploaden</button>
-        <?php } else { ?>
-
-        <?php } ?>
+            <a class="button-addJobOffer bg-primary" href="../paginas/upload-joboffer-page.php">Vacaturen uploaden</a>
+        <?php
+            include("../components/display-joboffers.php");
+        } else {
+            include("../components/display-joboffers.php");
+        }
+        ?>
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>

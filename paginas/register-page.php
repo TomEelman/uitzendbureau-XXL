@@ -13,10 +13,11 @@
         <?php include("../includes/navbar.php") ?>
     </header>
     <main>
-        <p class="login-txt">Registreren particulier account</p>
         <form action="../components/registration-login.php" method="POST">
 
-            <div class="inputfields-container">
+            <div class="inputfields-container my-5">
+                <h3 class="text-center">Registreren particulier account</h3>
+
                 <!-- Voor en achternaam -->
                 <div class="row g-3">
                     <div class="col">
@@ -91,14 +92,14 @@
                         <input class="form-control inputField" type="text" name="additive" placeholder="Toev" />
                     </div>
                 </div>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-primary my-3" type="submit">Registreren</button>
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary text-light" href="login-page.php">Heb je al een account? Klik hier</a>
+                </div>
             </div>
-
-            <div class="text-center">
-                <button class="btn btn-primary" type="submit">Registreren</button>
-            </div>
-
         </form>
-        <a class="text-primary" href="login-page.php">Heb je al een account? Klik hier</a>
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>

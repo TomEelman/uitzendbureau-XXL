@@ -13,25 +13,34 @@
         <?php include("../includes/navbar.php") ?>
     </header>
     <main>
-        <div class="inputfields-container">
+        <div class="inputfields-container my-5">
 
-            <p class="login-txt">Inloggen</p>
-
+            <h3 class="text-center">Inloggen</h3>
             <form action="../components/procces-login.php" method="POST" class="form">
-
                 <label for="email">Email:</label>
                 <input class="form-control" type="email" name="email" placeholder="Email" required />
 
                 <label for="password">Wachtwoord:</label>
                 <input class="form-control" type="password" name="password" placeholder="Wachtwoord" required />
 
-                <div class="text-center">
-                    <input class="btn btn-primary" type="submit" value="Inloggen" />
-                </div>
+                <div class="d-flex justify-content-end">
+                    <input class="btn btn-primary my-3" type="submit" value="Inloggen" />
             </form>
+        </div>
 
-            <a class="text-primary" href="../paginas/register-page.php">Maak een persoonlijk account</a>
-            <a class="text-primary" onclick="redirect()">Maak een zakelijk account</a>
+        <div class="row g-3 mt-4 mx-2">
+            <p class="text-center">Registreren.</p>
+            <div class="col">
+                <a class="btn btn-primary text-light" href="../paginas/register-page.php">Persoonlijk account</a>
+            </div>
+            <div class="col">
+                <hr style="width: 100%;">
+            </div>
+            <div class="col">
+                <a class="btn btn-primary text-light" onclick="redirect()">Particulier account</a>
+            </div>
+        </div>
+
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>
