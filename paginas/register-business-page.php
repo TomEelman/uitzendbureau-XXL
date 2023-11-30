@@ -17,26 +17,23 @@
         <p class="login-txt">Registreren particulier account</p>
         <form action="../components/registration-login.php" method="POST" class="register-form">
 
-            <div class="input-container">
                 <label for="firstname">Contact voornaam:</label>
-                <input class="register-input voornaam" type="text" name="firstname" placeholder="Voornaam" required />
+                <input class="input" type="text" name="firstname" placeholder="Voornaam" required />
 
                 <label for="lastname">Achternaam:</label>
-                <input class="register-input achternaam" type="text" name="lastname" placeholder="Achternaam" required />
+                <input class="input" type="text" name="lastname" placeholder="Achternaam" required />
 
                 <label for="companyname">Bedrijf naam:</label>
-                <input class="register-input achternaam" type="text" name="companyname" placeholder="Bedrijf naam" required />
+                <input class="input" type="text" name="companyname" placeholder="Bedrijf naam" required />
 
                 <label for="email">Email:</label>
-                <input class="register-input" type="email" name="email" placeholder="Email" required />
+                <input class="input" type="email" name="email" placeholder="Email" required />
 
                 <label for="wachtwoord">Wachtwoord:</label>
-                <input class="register-input" type="password" name="password" placeholder="Wachtwoord" required />
-            </div>
+                <input class="input" type="password" name="password" placeholder="Wachtwoord" required />
 
-            <div class="input-container-two">
                 <label for="country">Country:</label>
-                <select class="register-input-two" id="country" name="country">
+                <select class="input" id="country" name="country">
                     <option value="Nederland">Nederland</option>
                     <option value="Engeland">Engeland</option>
                 </select>
@@ -53,16 +50,12 @@
                 <label for="street">Straat:</label>
                 <input class="register-input-two" type="text" name="street" placeholder="Straat" required />
 
-            </div>
-
-            <div class="input-container-three">
                 <label for="housenumber">Huisnummer:</label>
                 <input class="register-input-two" type="text" name="housenumber" placeholder="Huisnummer" />
 
 
                 <label for="additive">Toevoeging:</label>
                 <input class="register-input-two" type="text" name="additive" placeholder="Toev" />
-            </div>
 
             <input class="register-input submit-button-register" type="submit" value="Registreren" />
         </form>

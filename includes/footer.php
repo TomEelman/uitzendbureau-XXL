@@ -5,7 +5,7 @@
     </div>
     <div class="footer-item">
         <h4 class="footer-item-title">Copyight</h4>
-        <p class="footer-item-content">&copy; Tomeelman BV.</p>
+        <p class="footer-item-content">&copy; 2023 Uitzendbureau. Alle rechten voorbehouden.</p>
     </div>
     <div class="footer-item">
         <h4 class="footer-item-title">Openings tijden</h4>

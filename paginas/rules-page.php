@@ -14,14 +14,14 @@
         <?php include("../includes/navbar.php") ?>
     </header>
     <main>
-        <h1 style="text-align: center;">Huisregels</h1>
-
-        <div class="rules">
-            <ul>
-                <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing ept.</p>
-                <p style="text-align: center;">Sed auctor pbero eu mauris dictum, ut consectetur lorem faucibus.</p>
-                <p style="text-align: center;">Vivamus vestibulum augue at malesuada posuere.</p>
-            </ul>
+        <div class="container">
+            <div class="row mt-5 p-5 border">
+                <h1>De regels van Uitzendbureau-XXL</h1>
+                <p>Regels:</p>
+                <ul>
+                    <li>Geen groftaalgebuik in de vacatures of de reacties.</li>
+                </ul>
+            </div>
         </div>
     </main>
     <footer>
