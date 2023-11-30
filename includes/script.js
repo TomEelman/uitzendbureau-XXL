@@ -9,26 +9,25 @@ function redirect() {
     window.location.href = "register-page.php?toggle=true";
 }
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const toggleParam = urlParams.get('toggle');
 
     if (toggleParam === 'true') {
         toggleBoolean();
     }
-};
+});
 
 function toggleBoolean() {
-
     var booleanValue = true;
 
     if (booleanValue) {
-        document.getElementById("companyInputFieldDiv").style.display = "block";
-        document.getElementById("companyInputField").style.display = "block";
-        document.getElementById("companyInput").style.display = "block";
-    } else {
-        document.getElementById("companyInputFieldDiv").style.display = "none";
-        document.getElementById("companyInputField").style.display = "none";
-        document.getElementById("companyInput").style.display = "none";
+        var companyInputField = document.getElementById("companyInputField");
+        var companyInput = document.getElementById("companyInput");
+
+        if (companyInputField && companyInput) {
+            companyInputField.style.display = "block";
+            companyInput.style.display = "block";
+        }
     }
 }

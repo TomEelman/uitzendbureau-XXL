@@ -18,6 +18,14 @@
             <div class="inputfields-container my-5">
                 <h3 class="text-center">Registreren particulier account</h3>
 
+                <!-- Bedrijf's naam -->
+                <div class="row mb-1">
+                    <div class="">
+                        <label for="companyname" id="companyInputField" class="col-form-label" style="display: none;">Company Name</label>
+                        <input id="companyInput" class="form-control" type="text" name="companyname" placeholder="Company Name" style="display: none;" />
+                    </div>
+                </div>
+
                 <!-- Voor en achternaam -->
                 <div class="row g-3">
                     <div class="col">
@@ -54,14 +62,6 @@
                     <div class="col">
                         <label for="phonenumber" class="col-form-label">Telefoon-nummer</label>
                         <input class="form-control inputField" type="phonenumber" name="phonenumber" placeholder="+31 061438290" required />
-                    </div>
-                </div>
-
-                <!-- Bedrijf's naam -->
-                <div class="row mb-1">
-                    <div class="col-sm-10">
-                        <label for="companyname" id="companyInputField" class="col-sm-2 col-form-label" style="display: none;">Company Name</label>
-                        <input id="companyInput" class="form-control" type="text" name="companyname" placeholder="Company Name" style="display: none;" />
                     </div>
                 </div>
 
