@@ -18,26 +18,23 @@
         <form action="../components/procces-login.php" method="POST" class="form">
 
             <label for="email">Email:</label>
-            <input class="input" type="email" name="email" placeholder="Email" required />
+            <input class="form-control inputField" type="email" name="email" placeholder="Email" required />
             <br>
 
             <label for="password">Wachtwoord:</label>
-            <input class="input" type="password" name="password" placeholder="Wachtwoord" required />
+            <input class="form-control inputField" type="password" name="password" placeholder="Wachtwoord" required />
             <br>
 
-            <input class="input submit-button" type="submit" value="Inloggen" />
+            <input class="form-control inputField submit-button btn-primary" type="submit" value="Inloggen" />
         </form>
-        <a class="register-page-txt" href="register-personal-page.php">Maak een persoonlijk account</a>
-        <a class="register-page-txt" href="register-business-page.php">Maak een zakelijk account</a>
+        <a class="register-page-txt" href="../paginas/register-page.php">Maak een persoonlijk account</a>
+        <a class="register-page-txt" onclick="redirect()">Maak een zakelijk account</a>
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>
     </footer>
 </body>
 
-<script>
-    <?php include("../includes/script.js") ?>
-</script>
 <?php
 if (isset($_SESSION['login_error'])) {
     echo '<p id="errorMessage">' . $_SESSION['login_error'] . '</p>';

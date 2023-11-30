@@ -16,9 +16,9 @@
     <main>
         <?php if (isset($_SESSION['email'])) { ?>
             <?php if (isset($_SESSION['companyname'])) { ?>
-                <h1 class="welcome-details">Welkom : <?php echo $_SESSION['companyname']; ?></h1>
+                <h1 class="text-align">Welkom  <?php echo $_SESSION['companyname']; ?></h1>
 
-                <div class="user-detail-container">
+                <div class="container">
                     <p>Voornaam : <?php echo $_SESSION['firstname']; ?></p>
                     <p>Achternaam : <?php echo $_SESSION['lastname']; ?></p>
                     <p>Email : <?php echo $_SESSION['email']; ?></p>
@@ -27,10 +27,10 @@
                     <p>Stad / Dorp : <?php echo $_SESSION['city']; ?></p>
                     <p>Postcode : <?php echo $_SESSION['postalcode']; ?></p>
                     <p>Straat : <?php echo $_SESSION['street'];
-                                $_SESSION['housenumber']; ?></p>
+                                    $_SESSION['housenumber']; ?></p>
                 </div>
             <?php } else { ?>
-                <div class="user-detail-container">
+                <div class="container">
 
                     <p>Voornaam : <?php echo $_SESSION['firstname']; ?></p>
                     <p>Achternaam : <?php echo $_SESSION['lastname']; ?></p>
@@ -40,7 +40,7 @@
                     <p>Stad / Dorp : <?php echo $_SESSION['city']; ?></p>
                     <p>Postcode : <?php echo $_SESSION['postalcode']; ?></p>
                     <p>Straat : <?php echo $_SESSION['street'];
-                                $_SESSION['housenumber']; ?></p>
+                                    $_SESSION['housenumber']; ?></p>
                 </div>
 
             <?php } ?>

@@ -24,26 +24,6 @@
     margin-left: 39%;
 }
 
-.input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-.submit-button {
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
 .register-page-txt {
     display: block;
     text-align: center;
@@ -60,3 +40,14 @@ form input[type="submit"]:hover {
     color: #000000;
     font-size: 32px;
 }
+
+.inputfields-container{
+    margin-left: 15%;
+    margin-right: 15%;
+    
+}
+
+.submit-button{
+    display: flex;
+    justify-content: center
+;}

@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("../components/session-start.php");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
