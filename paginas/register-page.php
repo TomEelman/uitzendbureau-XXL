@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../style/pages.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registreren</title>
 </head>
 
 <body>
@@ -18,99 +17,88 @@
         <form action="../components/registration-login.php" method="POST">
 
             <div class="inputfields-container">
-                <div class="row mb-3">
-                    <label for="firstname" class="col-sm-2 col-form-label">Voornaam:</label>
-                    <div class="col-sm-10">
-                        <input class="form-control inputField" type="text" name="firstname" placeholder="Voornaam" required />
+                <!-- Voor en achternaam -->
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="firstname">Voornaam</label>
+                        <input class="form-control" type="text" name="firstname" placeholder="Voornaam" required />
+                    </div>
+                    <div class="col">
+                        <label for="lastname">Achternaam</label>
+                        <input class="form-control" type="text" name="lastname" placeholder="Achternaam" required />
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <label for="lastname" class="col-sm-2 col-form-label">Achternaam:</label>
-                    <div class="col-sm-10">
-                        <input class="form-control inputField" type="text" name="lastname" placeholder="Achternaam" required />
-                    </div>
-                </div>
-
-                <div id="companyInputFieldDiv">
-                    <div class="row mb-3">
-                        <label for="companyname" id="companyInputField" class="col-sm-2 col-form-label" style="display: none;">Company Name:</label>
-                        <div class="col-sm-10">
-                            <input id="companyInput" class="form-control" type="text" name="companyname" placeholder="Company Name" style="display: none;" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label for="email" class="col-sm-2 col-form-label">Email:</label>
-                    <div class="col-sm-10">
+                <!-- Email en Wachtwoord -->
+                <div class="row g-3 mt-1">
+                    <div class="col">
+                        <label for="email">Email:</label>
                         <input class="form-control inputField" type="email" name="email" placeholder="Email" required />
                     </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label for="password" class="col-sm-2 col-form-label">Wachtwoord:</label>
-                    <div class="col-sm-10">
+                    <div class="col">
+                        <label for="password">Wachtwoord:</label>
                         <input class="form-control inputField" type="password" name="password" placeholder="Wachtwoord" required />
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <label for="phonenumber" class="col-sm-2 col-form-label">Telefoon-nummer:</label>
-                    <div class="col-sm-10">
-                        <input class="form-control inputField" type="phonenumber" name="phonenumber" placeholder="+31 061438290" required />
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label for="country" class="col-sm-2 col-form-label">Land:</label>
-                    <div class="col-sm-10">
+                <!-- Land en Telefoon nummer -->
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="country" class="col-sm-2 col-form-label">Land</label>
                         <select class="form-select inputField" id="country" name="country">
                             <option value="Nederland">Nederland</option>
                             <option value="Engeland">Engeland</option>
                         </select>
                     </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label for="city" class="col-sm-2 col-form-label">Stad / Dorp:</label>
-                    <div class="col-sm-10">
-                        <input class="form-control inputField" type="text" name="city" placeholder="city" />
+                    <div class="col">
+                        <label for="phonenumber" class="col-form-label">Telefoon-nummer</label>
+                        <input class="form-control inputField" type="phonenumber" name="phonenumber" placeholder="+31 061438290" required />
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <label for="postalcode" class="col-sm-2 col-form-label">Postcode:</label>
+                <!-- Bedrijf's naam -->
+                <div class="row mb-1">
                     <div class="col-sm-10">
+                        <label for="companyname" id="companyInputField" class="col-sm-2 col-form-label" style="display: none;">Company Name</label>
+                        <input id="companyInput" class="form-control" type="text" name="companyname" placeholder="Company Name" style="display: none;" />
+                    </div>
+                </div>
+
+                <!-- Woonplaats en Postcode -->
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="city" class="col-form-label">Stad / Dorp</label>
+                        <input class="form-control inputField" type="text" name="city" placeholder="city" />
+                    </div>
+                    <div class="col">
+                        <label for="postalcode" class="col-form-label">Postcode</label>
                         <input class="form-control inputField" type="text" name="postalcode" placeholder="7153DA" />
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <label for="street" class="col-sm-2 col-form-label">Straat:</label>
-                    <div class="col-sm-10">
+                <!-- Straat, huisnummer en toevoeging -->
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="street" class="col-form-label">Straat</label>
                         <input class="form-control inputField" type="text" name="street" placeholder="Janballeweg" />
                     </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label for="housenumber" class="col-sm-2 col-form-label">Huisnummer:</label>
-                    <div class="col-sm-10">
+                    <div class="col">
+                        <label for="housenumber" class="col-form-label">Huisnummer</label>
                         <input class="form-control inputField" type="text" name="housenumber" placeholder="Huisnummer" />
                     </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label for="additive" class="col-sm-2 col-form-label">Toevoeging:</label>
-                    <div class="col-sm-10">
+                    <div class="col">
+                        <label for="additive" class="col-form-label">Toevoeging</label>
                         <input class="form-control inputField" type="text" name="additive" placeholder="Toev" />
                     </div>
                 </div>
             </div>
 
-            <button class="btn btn-primary submit-button" type="submit">Registreren</button>
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">Registreren</button>
+            </div>
+
         </form>
-        <a class="register-page-txt" href="login-page.php">Heb je al een account? Klik hier</a>
+        <a class="text-primary" href="login-page.php">Heb je al een account? Klik hier</a>
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>

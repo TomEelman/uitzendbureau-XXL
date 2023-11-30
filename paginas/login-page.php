@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../style/pages.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
@@ -14,21 +13,25 @@
         <?php include("../includes/navbar.php") ?>
     </header>
     <main>
-        <p class="login-txt">Inloggen</p>
-        <form action="../components/procces-login.php" method="POST" class="form">
+        <div class="inputfields-container">
 
-            <label for="email">Email:</label>
-            <input class="form-control inputField" type="email" name="email" placeholder="Email" required />
-            <br>
+            <p class="login-txt">Inloggen</p>
 
-            <label for="password">Wachtwoord:</label>
-            <input class="form-control inputField" type="password" name="password" placeholder="Wachtwoord" required />
-            <br>
+            <form action="../components/procces-login.php" method="POST" class="form">
 
-            <input class="form-control inputField submit-button btn-primary" type="submit" value="Inloggen" />
-        </form>
-        <a class="register-page-txt" href="../paginas/register-page.php">Maak een persoonlijk account</a>
-        <a class="register-page-txt" onclick="redirect()">Maak een zakelijk account</a>
+                <label for="email">Email:</label>
+                <input class="form-control" type="email" name="email" placeholder="Email" required />
+
+                <label for="password">Wachtwoord:</label>
+                <input class="form-control" type="password" name="password" placeholder="Wachtwoord" required />
+
+                <div class="text-center">
+                    <input class="btn btn-primary" type="submit" value="Inloggen" />
+                </div>
+            </form>
+
+            <a class="text-primary" href="../paginas/register-page.php">Maak een persoonlijk account</a>
+            <a class="text-primary" onclick="redirect()">Maak een zakelijk account</a>
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>
