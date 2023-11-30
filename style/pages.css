@@ -75,7 +75,7 @@ form input[type="submit"]:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 700px;
     width: 100%;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     margin-left: 26.5%;
 }
 
@@ -84,14 +84,15 @@ form input[type="submit"]:hover {
     flex-direction: column;
 }
 
-.input-container-two{
+.input-container-two {
     position: absolute;
     display: flex;
     flex-direction: column;
     margin-left: 15%;
     margin-top: -23.9%;
 }
-.input-container-three{
+
+.input-container-three {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -150,7 +151,8 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -182,6 +184,7 @@ button:hover {
 .jobOffer p {
     margin-bottom: 0;
 }
+
 /* Logout button */
 
 .logoutButton {
@@ -198,7 +201,7 @@ button:hover {
 }
 
 /* account details text */
-.user-detail-container{
+.user-detail-container {
     display: inline-block;
     vertical-align: top;
     background-color: #fff;
@@ -207,10 +210,18 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     margin-left: 36%;
 }
 
-.welcome-details{
-text-align: center;
+.welcome-details {
+    text-align: center;
+}
+
+.hoofdtekst {
+    text-align: center;
+}
+
+.rules {
+    margin-top: 20px;
 }
