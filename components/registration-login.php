@@ -1,9 +1,7 @@
 <?php
-
 include("session-start.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
     $firstname = mysqli_real_escape_string($conn, $_POST["firstname"]);
     $lastname = mysqli_real_escape_string($conn, $_POST["lastname"]);
     $companyname = mysqli_real_escape_string($conn, $_POST["companyname"]);
@@ -18,7 +16,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $additive = mysqli_real_escape_string($conn, $_POST["additive"]);
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO users (firstname, lastname, companyname, email, password, phonenumber, country, city, postalcode, street, housenumber, additive) VALUES ('$firstname',id'$firstname', '$lastname', '$companyname', '$email', '$hashed_password', '$phonenumber', '$country', '$city', '$postalcode', '$street', '$housenumber', '$additive')";
+    $role = "user";
+
+    if (!empty($companyname)) {
+        $role = "company";
+    }
+
+    $query = "INSERT INTO users (role, firstname, lastname, companyname, email, password, phonenumber, country, city, postalcode, street, housenumber, additive) VALUES ('$role', '$firstname', '$lastname', '$companyname', '$email', '$hashed_password', '$phonenumber', '$country', '$city', '$postalcode', '$street', '$housenumber', '$additive')";
+
+    $_SESSION['login_error'] = "Dit zelfde email is al bij ons geregistreerd,<br> gebruik een ander email. <br> heb geen account gemaakt hebt met jouw email neem contact op met ons!";
+    header("Location: ../paginas/login-page.php");
+    exit();
 
     if (mysqli_query($conn, $query)) {
         echo '<script>alert("Je bent geregistreerd")</script>';
@@ -30,4 +38,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 mysqli_close($conn);
-?>

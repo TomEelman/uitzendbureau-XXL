@@ -6,7 +6,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand">
         <img class="logo img-fluid" src="../img/logo.png" alt="Logo">
       </a>
       <div class="collapse navbar-collapse">

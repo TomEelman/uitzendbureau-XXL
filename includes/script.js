@@ -5,7 +5,7 @@ setTimeout(function () {
     if (errorMessage) {
         errorMessage.style.display = 'none';
     }
-}, 3000);
+}, 6000);
 
 function redirect() {
     window.location.href = "register-page.php?toggle=true";

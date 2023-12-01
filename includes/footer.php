@@ -13,6 +13,6 @@
     </div>
 </div>
 
-<script>
+<script class="text-center">
     <?php include("../includes/script.js") ?>
 </script>
