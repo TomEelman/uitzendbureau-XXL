@@ -1,13 +1,18 @@
 <div class="footer">
-    <div class="fbox">
-        <p>1-800-243-0000</p>
-        <div><p>info@uitzendbureauxxl.nl</p></div>
+    <div class="footer-item">
+        <h4 class="footer-item-title">Adres</h4>
+        <p class="footer-item-content">Schagen, Janballestraat 12, 3287SU</p>
     </div>
-    <div class="fbox">
-        <p>Uitzendbureau XXL</p>
+    <div class="footer-item">
+        <h4 class="footer-item-title">Copyright</h4>
+        <p class="footer-item-content">&copy; 2023 Uitzendbureau. Alle rechten voorbehouden.</p>
     </div>
-    <div class="fbox">
-        <p>Links</p>
-        <a href="https://www.hotwheels.com"><div><p>Link</p></div></a>
+    <div class="footer-item">
+        <h4 class="footer-item-title">Openings tijden</h4>
+        <p class="footer-item-content"><a href="../paginas/rules-page.php">Zie huisregels</a></p>
     </div>
 </div>
+
+<script>
+    <?php include("../includes/script.js") ?>
+</script>

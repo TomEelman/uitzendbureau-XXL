@@ -1,0 +1,67 @@
+/* Navbar styling */
+.logo{
+    width: auto;
+    height: 70px;
+    margin-left: 15%;
+}
+
+/* Footer styling */
+.footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(212, 212, 212);
+}
+
+.footer-item-title {
+    opacity: 40%;
+    text-align: center;
+}
+
+.footer-item-content {
+    text-align: center;
+}
+
+.footer-item {
+    width: 33%;
+    display: inline-block
+}
+
+/* Error Message for login error */
+#errorMessage {
+    font-size: 16px;
+    padding: 20px;
+    background-color: #ff9999;
+    color: #000000;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    top: 42;
+    margin-left: 45%;
+}
+
+/* add jobofferrr button */
+.button-addJobOffer {
+    border: 1px solid #0400ff;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* inputfield containeer */
+.inputfields-container{
+    position: absolute;
+    left: 35%;
+    border: 1px solid rgb(216, 216, 216);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}

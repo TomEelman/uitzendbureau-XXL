@@ -1,7 +1,6 @@
 <?php
 session_start();
-
-$conn = mysqli_connect("localhost", "root", "", "uitzendbureau-xxl");
+include("../components/session-start.php");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());

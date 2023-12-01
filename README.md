@@ -1,2 +1,2 @@
 # Pinboard
-For the trial exam of 27-11-23
+Voor het oefenexamen van 27-11-23

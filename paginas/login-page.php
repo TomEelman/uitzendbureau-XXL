@@ -3,43 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../style/pages.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<header>
-    <?php include("../components/session-start.php") ?>
-    <?php include("../includes/navbar.php") ?>
-</header>
+
 <body>
-    <p class="login-txt">Inloggen</p>
-    <form action="../components/procces-login.php" method="POST" class="form">
+    <header>
+        <?php include("../components/session-start.php") ?>
+        <?php include("../includes/navbar.php") ?>
+    </header>
+    <main>
+        <div class="inputfields-container my-5">
 
-    <label for="email">Email:</label>
-        <input class="input" type="email" name="email" placeholder="Email" required/>
-        <br>
+            <h3 class="text-center">Inloggen</h3>
+            <form action="../components/procces-login.php" method="POST" class="form">
+                <label for="email">Email:</label>
+                <input class="form-control" type="email" name="email" placeholder="Email" required />
 
-    <label for="password">Wachtwoord:</label>
-        <input class="input" type="password" name="password" placeholder="Wachtwoord" required/>
-        <br>
+                <label for="password">Wachtwoord:</label>
+                <input class="form-control" type="password" name="password" placeholder="Wachtwoord" required />
 
-        <input class="input submit-button" type="submit" value="Inloggen"/>
-    </form>
- <a class="register-page-txt" href="register-personal-page.php">Maak een persoonlijk account</a>
- <a class="register-page-txt" href="register-business-page.php">Maak een zakelijk account</a>
+                <div class="d-flex justify-content-end">
+                    <input class="btn btn-primary my-3" type="submit" value="Inloggen" />
+            </form>
+        </div>
+
+        <div class="row g-3 mt-4 mx-2">
+            <p class="text-center">Registreren.</p>
+            <div class="col">
+                <a class="btn btn-primary text-light" href="../paginas/register-page.php">Persoonlijk account</a>
+            </div>
+            <div class="col">
+                <hr style="width: 100%;">
+            </div>
+            <div class="col">
+                <a class="btn btn-primary text-light" onclick="redirect()">Particulier account</a>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <?php include("../includes/footer.php") ?>
+    </footer>
 </body>
-<script>
-    setTimeout(function() {
-        var errorMessage = document.getElementById('errorMessage');
-        if (errorMessage) {
-            errorMessage.style.display = 'none';
-        }
-    }, 3000);
-</script>
+
 <?php
 if (isset($_SESSION['login_error'])) {
     echo '<p id="errorMessage">' . $_SESSION['login_error'] . '</p>';
     unset($_SESSION['login_error']);
 }
 ?>
+
 </html>
