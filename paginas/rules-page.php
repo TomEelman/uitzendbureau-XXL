@@ -19,6 +19,12 @@
                 <p>Regels:</p>
                 <ul>
                     <li>Geen groftaalgebuik in de vacatures of de reacties.</li>
+                    <li>Geen groftaalgebuik in de vacatures of de reacties.</li>
+                    <li>Geen groftaalgebuik in de vacatures of de reacties.</li>
+                    <li>Geen groftaalgebuik in de vacatures of de reacties.</li>
+                    <li>Geen groftaalgebuik in de vacatures of de reacties.</li>
+                    <li>Geen groftaalgebuik in de vacatures of de reacties.</li>
+                    <li>Geen groftaalgebuik in de vacatures of de reacties.</li>
                 </ul>
             </div>
         </div>

@@ -12,41 +12,38 @@
         <?php include("../components/session-start.php") ?>
         <?php include("../includes/navbar.php") ?>
     </header>
-    <main>
-        <?php if (isset($_SESSION['email'])) { ?>
-            <?php if (isset($_SESSION['companyname'])) { ?>
-                <h1 class="text-align">Welkom  <?php echo $_SESSION['companyname']; ?></h1>
+    <main class="d-flex justify-content-center align-items-center">
 
-                <div class="container">
-                    <p>Voornaam : <?php echo $_SESSION['firstname']; ?></p>
-                    <p>Achternaam : <?php echo $_SESSION['lastname']; ?></p>
-                    <p>Email : <?php echo $_SESSION['email']; ?></p>
-                    <p>Telefoonnummer : <?php echo $_SESSION['phonenumber']; ?></p>
-                    <p>Land : <?php echo $_SESSION['country']; ?></p>
-                    <p>Stad / Dorp : <?php echo $_SESSION['city']; ?></p>
-                    <p>Postcode : <?php echo $_SESSION['postalcode']; ?></p>
-                    <p>Straat : <?php echo $_SESSION['street'];
-                                    $_SESSION['housenumber']; ?></p>
-                </div>
-            <?php } else { ?>
-                <div class="container">
-
-                    <p>Voornaam : <?php echo $_SESSION['firstname']; ?></p>
-                    <p>Achternaam : <?php echo $_SESSION['lastname']; ?></p>
-                    <p>Email : <?php echo $_SESSION['email']; ?></p>
-                    <p>Telefoonnummer : <?php echo $_SESSION['phonenumber']; ?></p>
-                    <p>Land : <?php echo $_SESSION['country']; ?></p>
-                    <p>Stad / Dorp : <?php echo $_SESSION['city']; ?></p>
-                    <p>Postcode : <?php echo $_SESSION['postalcode']; ?></p>
-                    <p>Straat : <?php echo $_SESSION['street'];
-                                    $_SESSION['housenumber']; ?></p>
-                </div>
-
-            <?php } ?>
-        <?php } else {
+        <?php if (isset($_SESSION['email'])) {
+            if (isset($_SESSION['companyname'])) { ?>
+                <div class="custom-container my-2">
+                    <h3 class="text-center my-3">Bedrijfnaam : <?php echo $_SESSION['companyname']; ?></h3>
+            <?php }
+        } else {
             header("location:../index.php");
         } ?>
 
+            <div class="row g-3 container">
+                <div class="col">
+                    <ul class="list-group list-group-flush my-4">
+                        <li class="list-group-item">Voornaam : <?php echo $_SESSION['firstname']; ?></li>
+                        <li class="list-group-item">Achternaam : <?php echo $_SESSION['lastname']; ?></li>
+                        <li class="list-group-item">Email : <?php echo $_SESSION['email']; ?></li>
+                        <li class="list-group-item">Telefoonnummer : <?php echo $_SESSION['phonenumber']; ?></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="list-group list-group-flush my-4">
+                        <li class="list-group-item">Land : <?php echo $_SESSION['country']; ?></li>
+                        <li class="list-group-item">Stad / Dorp : <?php echo $_SESSION['city']; ?></li>
+                        <li class="list-group-item">Postcode : <?php echo $_SESSION['postalcode']; ?></li>
+                        <li class="list-group-item">Straat : <?php echo $_SESSION['street'];
+                                                                $_SESSION['housenumber'];
+                                                                $_SESSION['additive']; ?></li>
+                    </ul>
+                </div>
+            </div>
+                </div>
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>

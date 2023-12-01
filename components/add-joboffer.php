@@ -1,20 +1,26 @@
 <?php
-// Assuming you have a database connection in $conn
+
+include("session-start.php");
+
+$result = $conn->query("SELECT companyname FROM users");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $companyName = mysqli_real_escape_string($conn, $_POST['companyName']);
+    $userid = $_SESSION["id"];
+    $companyname = $_SESSION["companyname"];
+    $function = mysqli_real_escape_string($conn, $_POST['function']);
+    $time = mysqli_real_escape_string($conn, $_POST['time']);
+    $pay = mysqli_real_escape_string($conn, $_POST['pay']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
 
-    $query = "INSERT INTO joboffer (companyname, description) VALUES ('$companyName', '$description')";
-    $result = mysqli_query($conn, $query);
+    $query = "INSERT INTO joboffer (companyname, function, time, pay, description) VALUES ('$companyname', '$function', '$time', '$pay', '$description')";
 
-    if ($result) {
-        // Display updated job offers
-        include 'display_joboffers.php';
+    if (mysqli_query($conn, $query)) {
+        echo '<script>alert("Vacature toegevoegd")</script>';
+        header('Location: ../paginas/prikbord-page.php');
+        exit();
     } else {
-        echo 'Error: ' . mysqli_error($conn);
+        echo "Error: " . $query . "<br>" . mysqli_error($conn);
     }
 }
 
 mysqli_close($conn);
-?>

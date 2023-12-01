@@ -13,7 +13,7 @@
         <?php include("../includes/navbar.php") ?>
     </header>
     <main class="d-flex justify-content-center align-items-center">
-        <div class="inputfields-container my-5">
+        <div class="custom-container my-5">
 
             <h3 class="text-center">Inloggen</h3>
             <form action="../components/procces-login.php" method="POST" class="form">
