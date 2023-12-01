@@ -1,3 +1,5 @@
+var booleanValue = false;
+
 setTimeout(function () {
     var errorMessage = document.getElementById('errorMessage');
     if (errorMessage) {
@@ -31,3 +33,7 @@ function toggleBoolean() {
         }
     }
 }
+
+window.onload = (event) => {
+    console.log(booleanValue);
+};

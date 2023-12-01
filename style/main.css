@@ -55,10 +55,7 @@
     padding: 10px;
 }
 
-/* inputfield containeer */
 .inputfields-container{
-    position: absolute;
-    left: 35%;
     border: 1px solid rgb(216, 216, 216);
     padding: 20px;
     max-width: 600px;

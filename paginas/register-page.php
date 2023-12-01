@@ -12,10 +12,10 @@
         <?php include("../components/session-start.php") ?>
         <?php include("../includes/navbar.php") ?>
     </header>
-    <main>
+    <main class="d-flex justify-content-center align-items-center">
         <form action="../components/registration-login.php" method="POST">
 
-            <div class="inputfields-container my-5">
+            <div class="inputfields-container my-2">
                 <h3 class="text-center">Registreren particulier account</h3>
 
                 <!-- Bedrijf's naam -->
@@ -92,16 +92,21 @@
                         <input class="form-control inputField" type="text" name="additive" placeholder="Toev" />
                     </div>
                 </div>
-                <div class="d-flex justify-content-end">
-                    <button class="btn btn-primary my-3" type="submit">Registreren</button>
+
+                <!-- Submit en redirect knop -->
+                <div class="row">
+                    <div class="col">
+                        <a class="btn btn-primary my-3" href="login-page.php">Heb je al een account? Klik hier</a>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                        <button class="btn btn-primary my-3" type="submit">Registreren</button>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <a class="btn btn-primary text-light" href="login-page.php">Heb je al een account? Klik hier</a>
-                </div>
+
             </div>
         </form>
     </main>
-    <footer>
-        <?php include("../includes/footer.php") ?>
-    </footer>
 </body>
+<script>
+    <?php include("../includes/script.js") ?>
+</script>

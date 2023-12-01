@@ -12,7 +12,7 @@
         <?php include("../components/session-start.php") ?>
         <?php include("../includes/navbar.php") ?>
     </header>
-    <main>
+    <main class="d-flex justify-content-center align-items-center">
         <div class="inputfields-container my-5">
 
             <h3 class="text-center">Inloggen</h3>
