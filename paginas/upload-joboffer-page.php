@@ -30,8 +30,8 @@
 
                 <label for="time" class="col-form-label">Tijd besteding:</label>
                 <select class="form-select mb-2" id="time" name="time">
-                    <option value="Fulltime">Full-time</option>
-                    <option value="Parttime">Part-time</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
                 </select>
 
                 <label for="description">Meer informatie:</label>

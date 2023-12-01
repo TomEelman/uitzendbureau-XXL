@@ -2,25 +2,35 @@
 
 $result = $conn->query("SELECT * FROM joboffer");
 
-    echo '<div class="row g-3 mt-1">';
-    
+echo '<div class="container">
+    <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Bedrijfsnaam</th>
+            <th scope="col">Functie</th>
+            <th scope="col">Tijd besteding</th>
+            <th scope="col">Loon</th>
+            <th scope="col">Tijd van plaatsen</th>
+            <th scope="col">Meer informatie</th>
+        </tr>
+    </thead>
+    <tbody>'; // Open table body here
+
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo '
-        <div class="col">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Functie : ' . $row['function'] . '</h5>
-                <h6 class="card-title">Bedrijf : ' . $row['companyname'] . '</h6>
-                <h6 class="card-subtitle mb-2 text-muted">' . $row['pay'] . '€ p/m</h6>
-                <h6 class="card-subtitle mb-2 text-muted">' . $row['time'] . '</h6>
-                <a href="joboffer-detail-page.php?id=' . $row['offerid'] . '" class="card-link">Meer informatie</a>
-            </div>
-        </div>
-    </div> ';
+        echo '<tr>
+                <th scope="row">' . $row['companyname'] . '</th>
+                <td>' . $row['function'] . '</td>
+                <td>' . $row['time'] . '</td>
+                <td>' . $row['pay'] . '€ p/m</td>
+                <td>' . $row['uploadtime'] . '</td>
+                <td><a href="joboffer-detail-page.php?id=' . $row['offerid'] . '" class="card-link">Details</a></td>
+            </tr>';
     }
-    echo '</div>';
-
 } else {
-    echo '<h1 class="text-center m-3">Er zijn geen vacatures.</h1>';
+    echo '<tr><td colspan="5"><h1 class="text-center m-3">Er zijn geen vacatures.</h1></td></tr>';
 }
+
+echo '</tbody>
+    </table>
+</div>';
