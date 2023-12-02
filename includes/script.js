@@ -7,6 +7,13 @@ setTimeout(function () {
     }
 }, 6000);
 
+setTimeout(function () {
+    var succesMessage = document.getElementById('succesfulMessage');
+    if (succesMessage) {
+        succesMessage.style.display = 'none';
+    }
+}, 6000);
+
 function redirect() {
     window.location.href = "register-page.php?toggle=true";
 }

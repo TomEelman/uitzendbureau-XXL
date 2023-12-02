@@ -40,6 +40,16 @@
     text-align: center;
 }
 
+#succesfulMessage {
+    font-size: 16px;
+    padding: 20px;
+    background-color: #e0ffe6;
+    color: #000000;
+    border: 1px solid #1eff00;
+    border-radius: 5px;
+    text-align: center;
+}
+
 /* add jobofferrr button */
 .button-addJobOffer {
     border: 1px solid #0400ff;

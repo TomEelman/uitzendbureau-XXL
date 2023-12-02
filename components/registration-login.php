@@ -1,5 +1,8 @@
 <?php
+
 include("session-start.php");
+
+$role = "user";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstname = mysqli_real_escape_string($conn, $_POST["firstname"]);
@@ -16,24 +19,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $additive = mysqli_real_escape_string($conn, $_POST["additive"]);
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $role = "user";
+// Check if email already exists
+    $checkEmailQuery = "SELECT email FROM users WHERE email = '$email'";
+    $result = mysqli_query($conn, $checkEmailQuery);
 
-    if (!empty($companyname)) {
-        $role = "company";
+    if (mysqli_num_rows($result) > 0) {
+        $_SESSION['login_error'] = "Dit e-mailadres is al bij ons geregistreerd. Gebruik een ander e-mailadres of neem contact met ons op als je geen account hebt aangemaakt.";
+        header("Location: ../paginas/login-page.php");
+        exit();
     }
 
-    $query = "INSERT INTO users (role, firstname, lastname, companyname, email, password, phonenumber, country, city, postalcode, street, housenumber, additive) VALUES ('$role', '$firstname', '$lastname', '$companyname', '$email', '$hashed_password', '$phonenumber', '$country', '$city', '$postalcode', '$street', '$housenumber', '$additive')";
-
-    $_SESSION['login_error'] = "Dit zelfde email is al bij ons geregistreerd,<br> gebruik een ander email. <br> heb geen account gemaakt hebt met jouw email neem contact op met ons!";
-    header("Location: ../paginas/login-page.php");
-    exit();
+// Insert into database
+    if (!empty($companyname)) {
+        $role = "company";
+        $query = "INSERT INTO users (role, firstname, lastname, companyname, email, password, phonenumber, country, city, postalcode, street, housenumber, additive) VALUES ('$role', '$firstname', '$lastname', '$companyname', '$email', '$hashed_password', '$phonenumber', '$country', '$city', '$postalcode', '$street', '$housenumber', '$additive')";
+    } else {
+        $query = "INSERT INTO users (role, firstname, lastname, email, password, phonenumber, country, city, postalcode, street, housenumber, additive) VALUES ('$role', '$firstname', '$lastname', '$email', '$hashed_password', '$phonenumber', '$country', '$city', '$postalcode', '$street', '$housenumber', '$additive')";
+    }
 
     if (mysqli_query($conn, $query)) {
-        echo '<script>alert("Je bent geregistreerd")</script>';
-        header('Location: ../paginas/login-page.php');
-        exit();
+        $_SESSION['login_succes'] = "Uw account is geregistreerd.";
+        header("Location: ../paginas/login-page.php");
     } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($conn);
+
+        $_SESSION['login_error'] = "Er is een probleem opgetreden tijdens de registratie. Probeer het later opnieuw.";
+        header("Location: ../paginas/login-page.php");
     }
 }
 

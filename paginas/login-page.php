@@ -52,6 +52,10 @@ if (isset($_SESSION['login_error'])) {
     echo '<p id="errorMessage">' . $_SESSION['login_error'] . '</p>';
     unset($_SESSION['login_error']);
 }
+if (isset($_SESSION['login_succes'])) {
+    echo '<p id="succesfulMessage">' . $_SESSION['login_succes'] . '</p>';
+    unset($_SESSION['login_succes']);
+}
 ?>
 
 </html>
