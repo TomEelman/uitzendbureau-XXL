@@ -16,7 +16,7 @@
         <div class="custom-container my-5">
             <h3 class="text-center my-3">Vacature toevoegen</h3>
 
-            <form action="../components/add-joboffer.php" method="POST">
+            <form action="../components/functions/joboffer/add-joboffer.php" method="POST">
                 <div class="row g-3 mt-2">
                     <div class="col">
                         <label for="companyname">Functie naam :</label>

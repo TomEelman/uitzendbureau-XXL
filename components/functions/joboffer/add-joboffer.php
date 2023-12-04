@@ -1,6 +1,6 @@
 <?php
 
-include("session-start.php");
+include("../../session-start.php");
 
 $result = $conn->query("SELECT companyname FROM users");
 
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_query($conn, $query)) {
         echo '<script>alert("Vacature toegevoegd")</script>';
-        header('Location: ../../paginas/prikbord-page.php');
+        header('Location: ../../../paginas/joboffer-page.php');
         exit();
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conn);
