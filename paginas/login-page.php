@@ -16,7 +16,7 @@
         <div class="custom-container my-5">
 
             <h3 class="text-center">Inloggen</h3>
-            <form action="../components/procces-login.php" method="POST" class="form">
+            <form action="../components/functions/login-logout/procces-login.php" method="POST" class="form">
                 <label for="email">Email:</label>
                 <input class="form-control" type="email" name="email" placeholder="Email" required />
 

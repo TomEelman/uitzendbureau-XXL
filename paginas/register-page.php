@@ -13,7 +13,7 @@
         <?php include("../includes/navbar.php") ?>
     </header>
     <main class="d-flex justify-content-center align-items-center">
-        <form action="../components/registration-login.php" method="POST">
+        <form action="../components/functions/login-logout/procces-registration.php" method="POST">
 
             <div class="custom-container my-2">
                 <h3 class="text-center">Registreren particulier account</h3>

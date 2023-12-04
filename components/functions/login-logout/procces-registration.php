@@ -1,6 +1,6 @@
 <?php
 
-include("session-start.php");
+include("../../session-start.php");
 
 $role = "user";
 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_num_rows($result) > 0) {
         $_SESSION['login_error'] = "Dit e-mailadres is al bij ons geregistreerd. Gebruik een ander e-mailadres of neem contact met ons op als je geen account hebt aangemaakt.";
-        header("Location: ../paginas/login-page.php");
+        header("Location: ../../../paginas/login-page.php");
         exit();
     }
 
@@ -39,11 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($conn, $query)) {
         $_SESSION['login_succes'] = "Uw account is geregistreerd.";
-        header("Location: ../paginas/login-page.php");
+        header("Location: ../../../paginas/login-page.php");
     } else {
 
         $_SESSION['login_error'] = "Er is een probleem opgetreden tijdens de registratie. Probeer het later opnieuw.";
-        header("Location: ../paginas/login-page.php");
+        header("Location: ../../../paginas/login-page.php");
     }
 }
 

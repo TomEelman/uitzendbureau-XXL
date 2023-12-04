@@ -13,7 +13,7 @@
         <?php include("../includes/navbar.php") ?>
     </header>
     <main class="d-flex justify-content-center align-items-center">
-      <?php include("../components/display-specific-joboffer.php") ?>
+      <?php include("../components/functions/joboffer/display-specific-joboffer.php") ?>
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>

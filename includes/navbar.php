@@ -20,7 +20,7 @@
             <a class="nav-link text-light m-4" href="../index.php">Homepagina</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light m-4" href="../paginas/prikbord-page.php">Vacaturelijst</a>
+            <a class="nav-link text-light m-4" href="../paginas/joboffer-page.php">Vacaturelijst</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light m-4" href="../paginas/rules-page.php">Huisregels</a>
@@ -30,7 +30,7 @@
               <a class="nav-link text-light m-4" href="../paginas/account-page.php">Account</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light m-4" href="../components/procces-logout.php">Logout</a>
+              <a class="nav-link text-light m-4" href="../components/functions/login-logout/procces-logout.php">Logout</a>
             </li>
           <?php } else { ?>
             <li class="nav-item">

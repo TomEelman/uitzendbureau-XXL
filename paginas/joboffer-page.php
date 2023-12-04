@@ -17,7 +17,7 @@
             <a class="button-addJobOffer bg-primary" href="../paginas/upload-joboffer-page.php">Vacaturen uploaden</a>
         <?php }
 
-        include("../components/display-joboffers.php");
+        include("../components/functions/joboffer/display-joboffers.php");
 
         ?>
     </main>

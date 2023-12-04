@@ -1,5 +1,5 @@
 <?php
-include("../components/session-start.php");
+include("../../../components/session-start.php");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -33,16 +33,16 @@ if ($result && mysqli_num_rows($result) > 0) {
         $_SESSION['housenumber'] = $user['housenumber'];
         $_SESSION['additive'] = $user['additive'];
 
-        header("Location: ../index.php");
+        header("Location: ../../../index.php");
         exit();        
     } else {
         $_SESSION['login_error'] = "Incorrect password";
-        header("Location: ../paginas/login-page.php");
+        header("Location: ../../../paginas/login-page.php");
         exit();
     }
 } else {
     $_SESSION['login_error'] = "Email not found";
-    header("Location: ../paginas/login-page.php");
+    header("Location: ../../../paginas/login-page.php");
     exit();
 }
 

@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_query($conn, $query)) {
         echo '<script>alert("Vacature toegevoegd")</script>';
-        header('Location: ../paginas/prikbord-page.php');
+        header('Location: ../../paginas/prikbord-page.php');
         exit();
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conn);
