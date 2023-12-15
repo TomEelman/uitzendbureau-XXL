@@ -39,7 +39,7 @@ if ($result && $result->num_rows > 0) {
                 <td><a href="joboffer-detail-page.php?id=' . $row['offerid'] . '" class="card-link">Details</a></td>';
 
         if ($adminResult) {
-            echo '<td><a class="link-danger" href="../components/delete-joboffer.php?id=' . $row['offerid'] . '">Verwijder vacature</a></td>';
+            echo '<td><a class="link-danger" href="../components/functions/joboffer/delete-joboffer.php?id=' . $row['offerid'] . '">Verwijder vacature</a></td>';
         }
         echo '
             </tr>';

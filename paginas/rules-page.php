@@ -34,9 +34,6 @@
                             <li>Maandag - Vrijdag: 09:00 - 17:30 uur</li>
                             <li>Dinsdag - Zaterdag: 10:00 - 18:00 uur</li>
                             <li>Woensdag - Zondag: 11:30 - 20:00 uur</li>
-                            <li>Maandag - Donderdag: 08:00 - 16:00 uur en Vrijdag - Zaterdag: 12:00 - 22:00 uur</li>
-                            <li>Alle dagen behalve donderdag: 07:00 - 15:30 uur</li>
-                            <li>Maandag, woensdag, vrijdag: 09:30 - 18:30 uur en zaterdag - zondag: 11:00 - 16:00 uur</li>
                         </ul>
 
                     </div>
