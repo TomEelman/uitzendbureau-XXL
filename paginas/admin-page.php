@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prikbord</title>
+    <title>Admin</title>
 </head>
 
 <body>
@@ -13,11 +13,9 @@
         <?php include("../includes/navbar.php") ?>
     </header>
     <main class="d-flex justify-content-center align-items-center">
-        <?php if (isset($_SESSION['companyname'])) { ?>
-            <a class="button-addJobOffer bg-primary" href="../paginas/upload-joboffer-page.php">Vacaturen uploaden</a>
-        <?php }
-        include("../components/functions/joboffer/display-joboffers.php");
-        ?>
+
+        <?php include("../components/functions/admin/display-admin-pannel.php"); ?>
+
     </main>
     <footer>
         <?php include("../includes/footer.php") ?>

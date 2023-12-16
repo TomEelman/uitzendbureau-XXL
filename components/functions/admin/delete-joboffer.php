@@ -7,6 +7,6 @@ if (isset($_GET['id'])) {
     $deleteQuery = "DELETE FROM joboffer WHERE offerid = '$offerid'";
     
     if ($conn->query($deleteQuery) === TRUE) {
-        header('Location: ../../../paginas/joboffer-page.php');
+        header('Location: ../../../paginas/admin-pannel-page.php');
     } 
 }

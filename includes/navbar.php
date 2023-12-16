@@ -13,7 +13,7 @@
         <ul class="navbar-nav ms-auto">
           <?php if (isset($_SESSION["email"])) { ?>
             <li class="nav-item">
-              <li class="nav-link text-light m-4 bold">Welkom <?php echo $_SESSION['email']; ?></li>
+            <li class="nav-link text-light m-4 bold">Welkom <?php echo $_SESSION['email']; ?></li>
             </li>
           <?php } ?>
           <li class="nav-item">
@@ -25,6 +25,11 @@
           <li class="nav-item">
             <a class="nav-link text-light m-4" href="../paginas/rules-page.php">Huisregels</a>
           </li>
+          <?php if (isset($_SESSION['email']) && $_SESSION['role'] === 'admin') { ?>
+            <li class="nav-item">
+              <a class="nav-link text-light m-4 bold" href="../paginas/admin-page.php">Admin paneel</a>
+            </li>
+          <?php } ?>
           <?php if (isset($_SESSION["email"])) { ?>
             <li class="nav-item">
               <a class="nav-link text-light m-4" href="../paginas/account-page.php">Account</a>
